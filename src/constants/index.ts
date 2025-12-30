@@ -11,10 +11,10 @@ const navLinks = [
     name: "Skills",
     link: "#skills",
   },
-  {
+  /* {
     name: "Testimonials",
     link: "#testimonials",
-  },
+  }, */
 ];
 
 const words = [
@@ -29,13 +29,16 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 3, suffix: "+", label: "Years of Experience" },
+  { value: 20, suffix: "+", label: "Reusable UI Components Built" },
+  { value: 10, suffix: "+", label: "Internal Products Enabled" },
+  { value: 60, suffix: "%", label: "Delivery Time Improvement" },
 ];
 
 const logoIconsList = [
+  {
+    imgPath: "/images/logos/company-logo-1.png",
+  },
   {
     imgPath: "/images/logos/company-logo-1.png",
   },
@@ -121,7 +124,7 @@ const techStackIcons = [
   },
   {
     name: "Angular Developer",
-    modelPath: "/models/Angular.glb",
+    modelPath: "/models/Angular-transformed.glb",
     scale: 2.7,
     rotation: [0, 0, 0],
     position: [0, -2.1, 0],
@@ -153,7 +156,7 @@ const techStackIcons = [
 
   {
     name: "Docker",
-    modelPath: "/models/docker.glb",
+    modelPath: "/models/docker-transformed.glb",
     scale: 8,
     rotation: [0, 0, 0],
     position: [0, 0.7, 0],
@@ -163,41 +166,43 @@ const techStackIcons = [
 const expCards = [
   {
     review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+      "Khetesh consistently drove frontend performance improvements and set high engineering standards through ownership of shared UI components and collaboration across teams.",
     imgPath: "/images/exp1.png",
     logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    title: "Senior Full Stack Web Developer (Frontend-heavy)",
+    date: "May 2025 - Present",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Led cross-functional collaboration with design, product, and QA teams to deliver responsive and scalable user interfaces.",
+      "Optimized Stencil-based web components using lazy loading, code splitting, and custom performance strategies.",
+      "Mentored junior developers and conducted peer code reviews to improve frontend quality and consistency.",
+      "Drove frontend best practices through design workshops and architectural discussions.",
     ],
   },
   {
     review:
-      "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+      "Khetesh played a key role in building a scalable frontend foundation by developing a shared design system adopted across multiple internal platforms.",
     imgPath: "/images/exp2.png",
     logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    title: "Full Stack Web Developer",
+    date: "March 2023 - May 2025",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Developed and maintained a Stencil-based design system supporting 10+ internal platforms.",
+      "Built and documented 20+ reusable UI components, reducing UI inconsistencies and frontend tech debt.",
+      "Researched and implemented web components architecture to enable modular and scalable frontend development.",
+      "Promoted adoption of AI-assisted developer tools for frontend development.",
     ],
   },
   {
     review:
-      "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+      "Khetesh demonstrated strong fundamentals early in his career by improving backend reliability and contributing to enterprise-grade systems.",
     imgPath: "/images/exp3.png",
     logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    title: "Graduate Engineer Trainee",
+    date: "July 2022 - March 2023",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Developed backend modules for enterprise part numbering systems, improving data processing efficiency.",
+      "Increased backend code coverage from 30% to 80%, reducing error rates and improving system reliability.",
+      "Collaborated with senior engineers on design reviews, debugging, and production issue resolution.",
     ],
   },
 ];

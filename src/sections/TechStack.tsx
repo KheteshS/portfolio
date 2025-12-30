@@ -3,6 +3,7 @@ import TechIcon from "../components/models/TechLogos/TechIcon";
 import TitleHeader from "../components/TitleHeader";
 import { techStackIcons } from "../constants";
 import gsap from "gsap";
+import { useGLTF } from "@react-three/drei";
 
 const TechStack = () => {
   useGSAP(() => {
@@ -72,5 +73,9 @@ const TechStack = () => {
     </div>
   );
 };
+
+techStackIcons.forEach((icon) => {
+  useGLTF.preload(icon.modelPath);
+});
 
 export default TechStack;
