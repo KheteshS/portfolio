@@ -5,7 +5,7 @@ interface ButtonProps {
 }
 
 const Button = ({ text, className, id }: ButtonProps) => {
-  const handleButtonClick = (e: MouseEvent) => {
+  const handleButtonClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const target = document.getElementById("counter");
 

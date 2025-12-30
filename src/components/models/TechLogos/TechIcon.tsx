@@ -1,14 +1,23 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useEffect } from "react";
 import * as THREE from "three";
 
-const TechIcon = ({ model }) => {
-  const scene = useGLTF(model.modelPath);
+// interface modelProp {
+//   name: string;
+//   modelPath: string;
+//   scale: number;
+//   rotation: [number, number, number];
+//   position?: [number, number, number];
+// }
+
+const TechIcon = ({ model }: any) => {
+  const scene = useGLTF(model.modelPath) as any;
 
   useEffect(() => {
     if (model.name === "Interactive Developer") {
-      scene.scene.traverse((child) => {
+      scene.scene.traverse((child: any) => {
         if (child.isMesh && child.name === "Object_5") {
           child.material = new THREE.MeshStandardMaterial({ color: "white" });
         }
@@ -16,13 +25,13 @@ const TechIcon = ({ model }) => {
     }
 
     if (model.name === "Angular Developer") {
-      scene.scene.traverse((child) => {
+      scene.scene.traverse((child: any) => {
         if (child.isMesh) {
           child.material = new THREE.MeshStandardMaterial({ color: "#BE1FAF" });
         }
       });
     }
-  }, [scene]);
+  }, [model.name, scene]);
 
   return (
     <Canvas>

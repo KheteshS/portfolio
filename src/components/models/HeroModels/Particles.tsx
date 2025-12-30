@@ -1,25 +1,31 @@
 import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
+import { Points } from "three";
+
+const generateRandomParticles = (count: number) => {
+  const temp = [];
+  for (let i = 0; i < count; i++) {
+    temp.push({
+      position: [
+        (Math.random() - 0.5) * 10,
+        Math.random() * 10 + 5, // higher starting point
+        (Math.random() - 0.5) * 10,
+      ],
+      speed: 0.005 + Math.random() * 0.001,
+    });
+  }
+  return temp;
+};
 
 const Particles = ({ count = 200 }) => {
-  const mesh = useRef(null);
+  const mesh = useRef<Points>(null);
 
   const particles = useMemo(() => {
-    const temp = [];
-    for (let i = 0; i < count; i++) {
-      temp.push({
-        position: [
-          (Math.random() - 0.5) * 10,
-          Math.random() * 10 + 5, // higher starting point
-          (Math.random() - 0.5) * 10,
-        ],
-        speed: 0.005 + Math.random() * 0.001,
-      });
-    }
-    return temp;
+    return generateRandomParticles(count);
   }, [count]);
 
   useFrame(() => {
+    if (!mesh.current) return;
     const positions = mesh.current.geometry.attributes.position.array;
     for (let i = 0; i < count; i++) {
       let y = positions[i * 3 + 1];
@@ -40,12 +46,7 @@ const Particles = ({ count = 200 }) => {
   return (
     <points ref={mesh}>
       <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          count={count}
-          array={positions}
-          itemSize={3}
-        />
+        <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
       <pointsMaterial
         color="#ffffff"
