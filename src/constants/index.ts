@@ -269,23 +269,23 @@ const testimonials = [
 
 const socialImgs = [
   {
-    name: "insta",
-    url: "https://www.instagram.com/",
-    imgPath: "/images/insta.png",
+    name: "github",
+    url: "https://github.com/KheteshS",
+    imgPath: "/images/github.png",
   },
-  {
+  /* {
     name: "fb",
     url: "https://www.facebook.com/",
     imgPath: "/images/fb.png",
-  },
+  }, */
   {
     name: "x",
-    url: "https://www.x.com/",
+    url: "https://x.com/KheteshSingh",
     imgPath: "/images/x.png",
   },
   {
     name: "linkedin",
-    url: "https://www.linkedin.com/",
+    url: "https://www.linkedin.com/in/kheteshs",
     imgPath: "/images/linkedin.png",
   },
 ];

@@ -51,7 +51,7 @@ const ShowcaseSection = () => {
             <div className="image-wrapper">
               <img src="/images/project1.png" alt="Ryde" />
             </div>
-            <div className="text-content">
+            {/* <div className="text-content">
               <h2>
                 On-demand Rides Made Simple with a Powerful, User-Friendly App
                 called Ryde
@@ -60,7 +60,7 @@ const ShowcaseSection = () => {
                 An App built with React Native, Expo, & TailwindCSS for a fast,
                 user-friendly experience.
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* RIGHT */}
@@ -69,14 +69,14 @@ const ShowcaseSection = () => {
               <div className="image-wrapper bg-[#ffefdb]">
                 <img src="/images/project2.png" alt="Library Management" />
               </div>
-              <h2>Library Management Platform</h2>
+              {/* <h2>Library Management Platform</h2> */}
             </div>
 
             <div ref={project3Ref} className="project">
               <div className="image-wrapper bg-[#ffe7eb]">
                 <img src="/images/project3.png" alt="Library Management" />
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
+              {/* <h2>YC Directory - A Startup Showcase App</h2> */}
             </div>
           </div>
         </div>
