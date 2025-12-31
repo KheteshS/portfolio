@@ -98,20 +98,20 @@ const techStackImgs = [
     imgPath: "/images/logos/react.png",
   },
   {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
+    name: "Angular Developer",
+    imgPath: "/images/logos/angular.png",
   },
   {
     name: "Backend Developer",
     imgPath: "/images/logos/node.png",
   },
   {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
+    name: "Version Control System",
+    imgPath: "/images/logos/git.svg",
   },
   {
-    name: "Project Manager",
-    imgPath: "/images/logos/git.svg",
+    name: "Docker",
+    imgPath: "/images/logos/docker.png",
   },
 ];
 

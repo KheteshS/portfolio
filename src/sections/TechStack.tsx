@@ -1,9 +1,7 @@
 import { useGSAP } from "@gsap/react";
-import TechIcon from "../components/models/TechLogos/TechIcon";
 import TitleHeader from "../components/TitleHeader";
-import { techStackIcons } from "../constants";
+import { techStackImgs } from "../constants";
 import gsap from "gsap";
-import { useGLTF } from "@react-three/drei";
 
 const TechStack = () => {
   useGSAP(() => {
@@ -33,7 +31,7 @@ const TechStack = () => {
         />
 
         <div className="tech-grid">
-          {techStackIcons.map((icon) => (
+          {/* {techStackIcons.map((icon) => (
             <div
               key={icon.name}
               className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
@@ -49,33 +47,33 @@ const TechStack = () => {
                 </div>
               </div>
             </div>
-          ))}
+          ))} */}
 
           {/* This is for the img part */}
-          {/* {techStackImgs.map((techStackIcon, index) => (
+          {techStackImgs.map((techStackIcon, index) => (
             <div
               key={index}
-              className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
+              className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg relative"
             >
               <div className="tech-card-animated-bg" />
               <div className="tech-card-content">
-                <div className="tech-icon-wrapper">
-                  <img src={techStackIcon.imgPath} alt="" />
+                <div className="tech-icon-wrapper group">
+                  <img
+                    src={techStackIcon.imgPath}
+                    alt={techStackIcon.name}
+                    loading="lazy"
+                  />
                 </div>
                 <div className="padding-x w-full">
                   <p>{techStackIcon.name}</p>
                 </div>
               </div>
             </div>
-          ))} */}
+          ))}
         </div>
       </div>
     </div>
   );
 };
-
-techStackIcons.forEach((icon) => {
-  useGLTF.preload(icon.modelPath);
-});
 
 export default TechStack;

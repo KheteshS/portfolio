@@ -276,6 +276,14 @@ section {
 
   .tech-icon-wrapper {
     @apply flex justify-center items-center w-52 h-60 relative;
+
+    &:hover {
+      img {
+        @apply transition-transform duration-500 ease-out group-hover:scale-110 group-hover:skew-y-3 group-hover:-translate-y-1;
+
+        /* @apply transition-transform duration-500 ease-out group-hover:scale-110 group-hover:skew-x-3 will-change-transform; */
+      }
+    }
   }
 
   form {

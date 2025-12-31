@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import * as THREE from "three";
 
 // interface modelProp {
@@ -34,20 +34,22 @@ const TechIcon = ({ model }: any) => {
   }, [model.name, scene]);
 
   return (
-    <Canvas>
+    <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: false }}>
       <ambientLight intensity={0.3} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
       <Environment preset="city" />
       <OrbitControls enableZoom={false} />
 
       <Float speed={5.5} rotationIntensity={0.5} floatIntensity={0.9}>
-        <group
-          scale={model.scale}
-          rotation={model.rotation}
-          position={model.position || [0, 0, 0]}
-        >
-          <primitive object={scene.scene} />
-        </group>
+        <Suspense fallback={null}>
+          <group
+            scale={model.scale}
+            rotation={model.rotation}
+            position={model.position || [0, 0, 0]}
+          >
+            <primitive object={scene.scene} />
+          </group>
+        </Suspense>
       </Float>
     </Canvas>
   );

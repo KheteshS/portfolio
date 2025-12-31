@@ -16,7 +16,11 @@ const Testimonials = () => {
             <GlowCard card={testimonial} index={index}>
               <div className="flex items-center gap-3">
                 <div className="">
-                  <img src={testimonial.imgPath} alt={testimonial.name} />
+                  <img
+                    src={testimonial.imgPath}
+                    alt={testimonial.name}
+                    loading="lazy"
+                  />
                 </div>
 
                 <div className="">

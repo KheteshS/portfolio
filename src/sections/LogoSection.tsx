@@ -7,7 +7,7 @@ interface iconPropType {
 const LogoIcon = ({ icon }: { icon: iconPropType }) => {
   return (
     <div className="flex-none flex-center marquee-item">
-      <img src={icon.imgPath} alt={icon.imgPath} />
+      <img src={icon.imgPath} alt={icon.imgPath} loading="lazy" />
     </div>
   );
 };

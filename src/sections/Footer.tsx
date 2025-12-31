@@ -11,7 +11,12 @@ const Footer = () => {
         <div className="socials">
           {socialImgs.map((img) => (
             <a className="icon" target="_blank" href={img.url} key={img.url}>
-              <img className="w-5" src={img.imgPath} alt={img.name} />
+              <img
+                className="w-5"
+                src={img.imgPath}
+                alt={img.name}
+                loading="lazy"
+              />
             </a>
           ))}
         </div>

@@ -22,7 +22,7 @@ const Button = ({ text, className, id }: ButtonProps) => {
         <div className="bg-circle"></div>
         <p className="text">{text}</p>
         <div className="arrow-wrapper">
-          <img src="/images/arrow-down.svg" alt="arrow" />
+          <img src="/images/arrow-down.svg" alt="arrow" loading="lazy" />
         </div>
       </div>
     </a>
