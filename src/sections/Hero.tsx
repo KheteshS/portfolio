@@ -92,7 +92,7 @@ const Hero = () => (
         <div><strong>4+<span> years</span></strong><p>Engineering at Daimler Truck</p></div>
         <div><strong>10+<span> platforms</span></strong><p>Shared component adoption</p></div>
         <div><strong>60%<span> faster</span></strong><p>Feature delivery with shared UI</p></div>
-        <div><strong>8s <span aria-hidden="true">&#8594;</span> 800ms</strong><p>Slow PostgreSQL query optimization</p></div>
+        <div><strong>10-12s <span aria-hidden="true">&#8594;</span> 1-2s</strong><p>Initial app load after app-frame upgrade</p></div>
       </div>
     </div>
     <div className="engineering-ribbon" aria-hidden="true">
