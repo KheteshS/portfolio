@@ -1,73 +1,91 @@
-# React + TypeScript + Vite
+# Khetesh Singh - Engineering Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React + TypeScript portfolio focused on product engineering,
+enterprise integrations, applied AI, and delivery ownership. The content
+demonstrates problem-to-delivery work rather than advertising a target job title.
 
-Currently, two official plugins are available:
+## Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+npm ci
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+npm run build
+npm run lint
+npm run preview
 ```
+
+The production output is generated in `dist`. The site uses Vite and Tailwind CSS.
+No backend or EmailJS configuration is required: contact links open an email
+client, and the copy-email button announces success or failure.
+
+## Content
+
+- `src/sections/Hero.tsx`: introduction and selected career outcomes.
+- `src/sections/ShowcaseSection.tsx`: frontend component library, RepoLens,
+  and Automata, with expandable engineering notes.
+- `src/sections/ExperienceSection.tsx`: employer and role progression.
+- `src/sections/TechStack.tsx`: capabilities and supporting technologies.
+- `src/sections/Contact.tsx`: email, GitHub, and LinkedIn.
+- `src/components/MotionEffects.tsx`: GSAP entrances, scroll reveals, reading
+  progress, pointer spotlights/tilt, and the pause-motion control.
+- `src/components/AnimatedDetails.tsx`: native keyboard-accessible disclosures
+  with reversible height/opacity animations for opening and closing.
+- `src/components/ProjectPreviews.tsx`: interactive library explorer (sortable,
+  selectable table, app frame, keyboard-accessible tabs) and Automata's AI-powered
+  testing-scope map. These use example data, not proprietary UI or live test runs.
+  Project cards use a balanced overview above a compact, full-width interactive
+  stage. Engineering notes expand below the stage, never stretching a side panel.
+- `public/resume.html`: standalone, print-friendly resume. Use its
+  **Print / save as PDF** action to produce a PDF with the browser.
+
+Keep the resume and portfolio claims synchronized. Lead with software development,
+system integration, and delivery; testing is a project domain, not the portfolio's
+professional identity. Automata is a testing framework: the described contribution
+is improvements to its automation agents and complete ownership of building its
+API-testing feature, not just frontend or integration work.
+The first enterprise project is a frontend library, not a standalone product
+platform. Automata is enterprise work using OpenAI; RepoLens uses Gemini.
+The app-frame upgrade's 10-12s to 1-2s result refers to initial application load
+time in consuming applications, not API latency or library build time.
+GitHub Copilot and Claude Code are listed separately as AI development tools.
+Internal work uses clearly labeled conceptual diagrams rather
+than proprietary screenshots. Do not present diagrams as live product output or
+add customer/adoption claims without supporting evidence.
+
+## Accessibility and manual checks
+
+- Keyboard-test the skip link, navigation, case-study disclosures, and contact actions.
+- At mobile widths, open the navigation menu and follow each section link.
+- Check layout at 320px, 390px, 768px, and desktop widths without horizontal overflow.
+- Confirm each case study expands with Enter/Space and exposes its engineering notes.
+- Check both opening and closing animation, including rapid direction changes.
+- Switch library previews with clicks and arrow/Home/End keys; verify table sorting,
+  row selection, and nested tab panels. Explore Automata's testing types and confirm
+  API-feature ownership stays distinct from the broader framework scope.
+- On desktop, keep the library and Automata stages below 360px tall in every
+  interactive state. Expanding engineering notes must not increase stage height.
+- Confirm career dots and the connecting line fill as entries cross 55% of the
+  viewport, and unfill when scrolling back. This works even with motion paused.
+- Check copy-email feedback and the fallback message when clipboard access fails.
+- Check `/resume.html` directly, including its print preview.
+- The site respects reduced-motion preferences and has no scroll-capturing 3D canvas.
+- Verify **Pause motion** stops ambient animation and restores any scroll-reveal
+  content to its readable state. **Resume motion** enables effects again.
+- With reduced motion enabled, all content must remain visible and animation-free.
+- Pointer tilt and spotlights run only on fine-pointer, hover-capable devices.
+- Verify background orbit dots stay centered on the ring strokes throughout a
+  full revolution, including tilted rings and mobile layouts.
+
+The hero uses a visible SVG system with orbiting satellites, flowing connections,
+CSS auroras, and floating code chips. The career timeline has a traveling signal
+and a pulsing current-role marker, so motion is visible beyond the hero.
+Project diagrams animate conceptually; they are not live
+execution indicators. Motion does not capture scrolling or change project claims.
+The blue grid and purple diamond patterns stay stationary while low-opacity
+lighting sweeps/drifts behind their content on 18/20-second cycles. Both effects
+respect Pause motion and reduced motion; the green background remains unchanged.
+
+Measure performance against the production build, not the development server.
