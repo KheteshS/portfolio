@@ -7,7 +7,7 @@ const Hero = () => (
     </div>
     <div className="container">
       <div className="hero-topline">
-        <span className="eyebrow"><span className="status-dot" /> Full-stack engineer</span>
+        <span className="eyebrow"><span className="status-dot" /> Full-stack web developer</span>
         <span className="location">Bengaluru, India <span aria-hidden="true">&#8599;</span></span>
       </div>
       <div className="hero-grid">
@@ -15,16 +15,16 @@ const Hero = () => (
           <p className="hero-intro">Hi, I'm Khetesh.</p>
           <h1 id="hero-title">Complex workflows.<br /><span>Working software.</span></h1>
           <p className="hero-description">
-            I work with product teams to turn complex requirements into
-            software people can use. 4+ years at Daimler Truck, building
-            enterprise applications, connecting systems, and improving
-            how teams ship.
+            I build full-stack web applications, from polished interfaces
+            and reusable components to APIs, data, and AI integrations.
+            4+ years at Daimler Truck solving complex product problems
+            across the stack.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">Explore my work <span aria-hidden="true">&#8600;</span></a>
-            <a className="button button-secondary" href="/resume.html">View resume <span aria-hidden="true">&#8599;</span></a>
+            <a className="button button-secondary" href="/17_11_2026.pdf" target="_blank" rel="noopener noreferrer">View resume (PDF) <span aria-hidden="true">&#8599;</span><span className="sr-only"> (opens in a new tab)</span></a>
           </div>
-          <p className="role-note"><span className="status-dot" /> Product thinking. Hands-on engineering. Delivery ownership.</p>
+          <p className="role-note"><span className="status-dot" /> Frontend craft. Backend systems. Product thinking.</p>
         </div>
         <div className="hero-visual" data-spotlight>
           <div className="system-globe" aria-hidden="true">
@@ -99,7 +99,7 @@ const Hero = () => (
       <div className="ribbon-track">
         {[0, 1].map((group) => (
           <div className="ribbon-group" key={group}>
-            {["Product engineering", "System integration", "Applied AI", "Delivery ownership"].map((item) => (
+            {["Web applications", "System integration", "Applied AI", "Release engineering"].map((item) => (
               <span key={item}><i>&#10035;</i>{item}</span>
             ))}
           </div>

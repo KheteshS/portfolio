@@ -1,8 +1,9 @@
 # Khetesh Singh - Engineering Portfolio
 
-A responsive React + TypeScript portfolio focused on product engineering,
-enterprise integrations, applied AI, and delivery ownership. The content
-demonstrates problem-to-delivery work rather than advertising a target job title.
+A responsive React + TypeScript portfolio focused on full-stack web
+development: frontend applications and libraries, backend APIs, enterprise
+integrations, and applied AI. Delivery and release engineering support this
+full-stack profile rather than replacing it with a narrower job-title claim.
 
 ## Development
 
@@ -38,11 +39,11 @@ client, and the copy-email button announces success or failure.
   testing-scope map. These use example data, not proprietary UI or live test runs.
   Project cards use a balanced overview above a compact, full-width interactive
   stage. Engineering notes expand below the stage, never stretching a side panel.
-- `public/resume.html`: standalone, print-friendly resume. Use its
-  **Print / save as PDF** action to produce a PDF with the browser.
+- `public/17_11_2026.pdf`: the resume opened directly by the site's resume links.
 
-Keep the resume and portfolio claims synchronized. Lead with software development,
-system integration, and delivery; testing is a project domain, not the portfolio's
+Keep the supplied PDF resume and portfolio claims synchronized. Lead with full-stack
+web application development; system integration, release engineering, and testing
+are supporting parts of that work, not the portfolio's
 professional identity. Automata is a testing framework: the described contribution
 is improvements to its automation agents and complete ownership of building its
 API-testing feature, not just frontend or integration work.
@@ -70,7 +71,7 @@ add customer/adoption claims without supporting evidence.
 - Confirm career dots and the connecting line fill as entries cross 55% of the
   viewport, and unfill when scrolling back. This works even with motion paused.
 - Check copy-email feedback and the fallback message when clipboard access fails.
-- Check `/resume.html` directly, including its print preview.
+- Check `/17_11_2026.pdf` directly and confirm all resume links open it.
 - The site respects reduced-motion preferences and has no scroll-capturing 3D canvas.
 - Verify **Pause motion** stops ambient animation and restores any scroll-reveal
   content to its readable state. **Resume motion** enables effects again.

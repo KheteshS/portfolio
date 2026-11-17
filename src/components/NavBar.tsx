@@ -15,7 +15,7 @@ const NavBar = () => {
       <div className="container nav-inner">
         <a className="wordmark" href="#hero" onClick={() => setMenuOpen(false)} aria-label="Khetesh Singh, home">
           <span className="wordmark-symbol" aria-hidden="true">k<span>.</span></span>
-          <span>Khetesh Singh<span className="wordmark-caption">Engineer. Builder. Problem solver.</span></span>
+          <span>Khetesh Singh<span className="wordmark-caption">Full-stack web developer.</span></span>
         </a>
         <button
           className="menu-toggle"
@@ -30,8 +30,8 @@ const NavBar = () => {
           {links.map(({ label, href }) => (
             <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>
           ))}
-          <a className="nav-resume" href="/resume.html" onClick={() => setMenuOpen(false)}>
-            View resume <span aria-hidden="true">&#8599;</span>
+          <a className="nav-resume" href="/17_11_2026.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>
+            View resume (PDF) <span aria-hidden="true">&#8599;</span><span className="sr-only"> (opens in a new tab)</span>
           </a>
         </nav>
       </div>

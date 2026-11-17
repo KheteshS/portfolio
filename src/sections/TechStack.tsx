@@ -1,16 +1,16 @@
 const capabilities = [
-  { number: "01", title: "Product engineering", description: "Translate product requirements and real workflows into usable applications.", tools: "Angular / React / Next.js / TypeScript / Storybook" },
-  { number: "02", title: "Systems & integrations", description: "Connect application interfaces, APIs, data, and asynchronous work.", tools: "Node.js / Express / PostgreSQL / Redis / BullMQ" },
+  { number: "01", title: "Full-stack web development", description: "Build web applications end to end, from responsive interfaces and reusable components to backend services.", tools: "Angular / React / Next.js / TypeScript / Node.js" },
+  { number: "02", title: "APIs, data & integrations", description: "Design and connect the services, databases, and asynchronous jobs behind web applications.", tools: "Express / REST APIs / PostgreSQL / Redis / BullMQ" },
   { number: "03", title: "Applied AI", description: "Integrate OpenAI in Automata and Gemini in RepoLens; use GitHub Copilot and Claude Code for AI-assisted development.", tools: "Product integrations: OpenAI / Gemini. Development tools: GitHub Copilot / Claude Code." },
-  { number: "04", title: "Delivery & enablement", description: "Make the path from a code change to a usable release repeatable.", tools: "Azure DevOps / GitHub Actions / semantic-release / ADRs" },
+  { number: "04", title: "Release engineering", description: "Build reliable CI/CD pipelines and developer workflows for shipping web applications and shared libraries.", tools: "Azure DevOps / GitHub Actions / semantic-release / ADRs" },
 ];
 
 const TechStack = () => (
   <section id="skills" className="section capabilities-section" aria-labelledby="skills-title">
     <div className="container">
       <div className="section-heading">
-        <div><p className="eyebrow"><span className="section-index">03 /</span> Capabilities</p><h2 id="skills-title">The right tool.<br />The whole problem.</h2></div>
-        <p>I connect product requirements with implementation: interfaces people can use, systems that work together, and a repeatable path to delivery.</p>
+        <div><p className="eyebrow"><span className="section-index">03 /</span> Capabilities</p><h2 id="skills-title">Full-stack web<br />engineering.</h2></div>
+        <p>I build across the web stack: responsive interfaces and reusable components, backend APIs and data, system integrations, and applied AI.</p>
       </div>
       <div className="capability-grid">
         {capabilities.map((capability) => (
@@ -20,7 +20,7 @@ const TechStack = () => (
           </article>
         ))}
       </div>
-      <div className="working-principles"><span className="eyebrow">How I approach the work</span><p>Understand the workflow.<span aria-hidden="true">&#8594;</span> Make the trade-offs explicit.<span aria-hidden="true">&#8594;</span> Build, deploy, iterate.</p></div>
+      <div className="working-principles"><span className="eyebrow">How I approach the work</span><p>Understand the product.<span aria-hidden="true">&#8594;</span> Build across the stack.<span aria-hidden="true">&#8594;</span> Test, deploy, iterate.</p></div>
     </div>
   </section>
 );

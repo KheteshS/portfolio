@@ -4,7 +4,7 @@ const roles = [
   {
     title: "Senior Software Developer",
     date: "May 2025 - Present",
-    summary: "Enterprise application development, integrations, and delivery ownership.",
+    summary: "Full-stack web applications, system integrations, and release engineering.",
     points: [
       "Led frontend delivery across four product teams and mentored three engineers.",
       "Own CI/CD and semantic-release for the Angular tlx-library, from release conventions to automated package publishing.",
@@ -89,12 +89,12 @@ const ExperienceSection = () => {
       <div className="experience-intro">
         <p className="eyebrow"><span className="section-index">02 /</span> Experience</p>
         <h2 id="experience-title">One enterprise.<br />A growing scope.</h2>
-        <p>From backend fundamentals to frontend libraries and AI-powered tooling. Building at the intersection of product needs and engineering execution.</p>
+        <p>From Node.js and PostgreSQL to Angular libraries and AI-powered features, building web applications and the systems behind them.</p>
         <div className="employer-card">
           <span className="employer-monogram" aria-hidden="true">DT</span>
           <div><strong>Daimler Truck</strong><span>Innovation Center India</span><small>Bengaluru / Feb 2022 - Present</small></div>
         </div>
-        <a className="text-link" href="/resume.html">View full resume <span aria-hidden="true">&#8599;</span></a>
+        <a className="text-link" href="/17_11_2026.pdf" target="_blank" rel="noopener noreferrer">View full resume (PDF) <span aria-hidden="true">&#8599;</span><span className="sr-only"> (opens in a new tab)</span></a>
         <div className="recognition">
           <p className="eyebrow">Recognized at Daimler Truck</p>
           <ul>
